@@ -1,0 +1,219 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    font-family: Roboto, sans-serif;
+} /*configuraçao geral*/
+
+.container{
+    max-width: 1024px;
+    width: 100%;
+    margin: 0 auto;
+} /*layout desktop*/
+
+header{
+    padding: 20px 0;
+    background-color: rgb(28, 28, 121);
+} 
+
+header h1{
+    font-family: "Space Grotesk";
+    font-weight: bold;
+    color: white;
+} /*Nome do site*/
+
+header .container {
+    display: flex;
+    justify-content: space-between; /* Alinha o h1 à esquerda e o menu à direita */
+    align-items: center; /* Centraliza verticalmente o conteúdo */
+}
+
+header h1 {
+    margin: 0; /* Remove margens para garantir alinhamento adequado */
+}
+
+header nav ul {
+    display: flex;
+    list-style: none; 
+    padding: 0; 
+    margin: 0; 
+}
+
+header nav li {
+    margin-left: 16px;
+    font-size: 22px;
+} /* Espaçamento entre os itens do menu */
+
+header nav li a {
+    color: white;
+    text-decoration: none;
+}
+.bloco-1{
+    padding-top: 50px;
+    display: flex;
+    gap: 20px; /* Espaço entre a imagem e o texto */
+}
+
+.bloco-1 img{
+    max-width: 40%;
+    flex-shrink: 0; /* Garante que a imagem não encolha */
+}
+
+.bloco-1 h2, .bloco-2 h2, .bloco-3 h2 {
+    margin-bottom: 40px; 
+    color: rgb(28, 28, 121);
+    border-bottom: 2px solid rgb(28, 28, 121); /* Linha embaixo do título */
+    padding-bottom: 5px; /* Espaço entre o título e a linha */
+    font-style: italic;
+}
+
+.bloco-1 p {
+    margin: 0;
+    color: black;
+}
+
+.bloco-2 img{
+    max-width: 100%;
+}
+
+.bloco-2{
+    padding-top: 3%;
+}
+
+.Produtos{
+    display: grid;
+    grid-template-columns: repeat(4, 25%); /*não pode ter espaço entre repeat e os parenteses*/
+    column-gap: 3%;
+    row-gap: 5%;
+}
+
+.Produtos h3, p, button{
+    margin-top: 15px;
+    width: 100%;
+}
+
+.Produtos button{
+    background-color: rgb(28, 28, 121);
+    color: white;
+    font-weight: bold;
+    padding: 8px 30px;
+    border-radius: 5px;
+    border: none;
+}
+
+.bloco-3{
+    margin: 50px 0;
+}
+
+footer{
+    margin: 50px 0;
+    padding: 20px 10%;
+    background-color: rgb(28, 28, 121);
+    color: white;
+}
+
+@media screen and (min-width: 641px) and (max-width: 1023px) {
+    .container{
+        max-width: 80%;
+        margin: 0 10%;
+    }
+
+    .bloco-1{
+        display: block;
+    }
+
+    .bloco-1 img{
+        max-width: 90%;
+        display: block;
+        margin: auto;
+    }
+
+    .container h2{
+        font-size: 2em;
+        padding-top: 50px;
+    }
+
+    .container p {
+        font-size:1.3em;
+        font-style: normal;
+    }
+
+    .Produtos{
+        padding-top: 40px;
+        display: grid;
+        grid-template-columns: repeat(2, 47%); /*não pode ter espaço entre repeat e os parenteses*/
+        column-gap: 3%;
+        row-gap: 5%;   
+    }
+
+    .bloco-2 h3{
+        text-overflow:ellipsis;
+        white-space: nowrap;
+        overflow: hidden;
+        font-size: 2em; 
+    }
+
+    .Produtos button{
+        font-size: 20px;
+    }
+
+    .bloco-3{
+        padding-top: 40px;
+    }
+}
+
+@media screen and (max-width: 640px) {
+
+    .container{
+        max-width: 80%;
+        flex-direction: column;
+    }
+
+    header .cabecalho{
+        display: flex;
+        justify-content: space-between; /* Alinha o h1 à esquerda e o menu à direita */
+        align-items: center; /* Centraliza verticalmente o conteúdo */
+        flex-direction: row; /* Garante que o título e o menu fiquem lado a lado */
+    }
+
+    header h1 {
+        font-size: 1.5em; /* Ajuste o tamanho da fonte do título, se necessário */
+    }
+
+    header nav ul {
+        display: flex;
+        flex-direction: row; /* Garante que os itens do menu fiquem em linha */
+    }
+
+    header nav li {
+        font-size: 1em;
+    }
+
+    .bloco-1 img, .Produtos img{
+        max-width: 100%;
+        display: block;
+        margin: 0 auto;
+    }
+
+    .bloco-2{
+        padding-top: 10px;
+    }
+
+    .Produtos{
+        padding-top: 10px;
+        display:block;
+    }
+
+    .container h3{
+        font-size: 1.5em;
+    }
+
+    .Produtos button{
+        font-size: 1em;
+        margin-bottom: 50px;
+    }
+
+    .bloco-3{
+        margin-top: 0px;
+    }
+}
